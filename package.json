@@ -2,9 +2,17 @@
   "name": "cloudrunsourcecodedeploy",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node server.js",
+    "test": "mocha --exit"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "supertest": "^6.0.1"
   },
   "repository": {
     "type": "git",
