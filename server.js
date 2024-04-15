@@ -9,7 +9,12 @@ const app = express();
 app.get("/", (req, res) => res.send("This response is coming from source deployment code, please check for the latest changes "));
 app.post("/test", (req, res) => {
 console.log("Call came till here and request is now logged");
-res.send("Post API response call  ")
+res.send({
+  "type": "text",
+  "payload": {
+    "text": "This is sample response from cloud function"
+  }
+})
 });
 
 let server = app.listen(PORT, () => {
